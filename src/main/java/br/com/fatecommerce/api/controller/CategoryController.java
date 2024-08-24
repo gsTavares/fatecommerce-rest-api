@@ -33,7 +33,7 @@ public class CategoryController {
     @GetMapping("/list")
     public ResponseEntity<Object> listCategory() {
         List<Category> result = categoryService.listCategory();
-        return ResponseEntity.status(HttpStatus.OK).body(result);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
 }
