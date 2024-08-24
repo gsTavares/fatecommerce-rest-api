@@ -27,13 +27,13 @@ public class CategoryController {
     @PostMapping("/create")
     public ResponseEntity<Object> saveCategory(@RequestBody Category category) {
         Category result = categoryService.saveCategory(category);
-        return ResponseEntity.status(HttpStatus.OK).body(result);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
     @GetMapping("/list")
     public ResponseEntity<Object> listCategory() {
         List<Category> result = categoryService.listCategory();
-        return ResponseEntity.status(HttpStatus.CREATED).body(result);
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
 }
